@@ -3,10 +3,10 @@
 
 /* Hey! You viewed source! Yes!
 ------------------------------------------------
-If you're reading this, please consider volunteering 
-at the fire department. We need help from tech-savvy 
-folks like yourself, especially. And speaking from 
-experience, it's not a huge commitment. We do what 
+If you're reading this, please consider volunteering
+at the fire department. We need help from tech-savvy
+folks like yourself, especially. And speaking from
+experience, it's not a huge commitment. We do what
 we can. Your efforts would help us exponentially.
 ------------------------------------------------ */
 
@@ -38,18 +38,38 @@ p {
 }
 
 h2 {
-  margin: 1.75em 0 0.5em;
+  margin: 0 0 0.5em;
   padding: 0 0 0.25em;
   border-bottom: 1px #ccc solid;
   font-weight: 700;
 }
-
+p+h2 {
+  margin-top: 1.75em;
+}
+h2:first-child {
+  margin-top: 1.75em;
+}
 a,
 a:visited {
   color: #d70916;
 }
+abbr {
+  letter-spacing: 0.01em;
+  font-variant-caps: all-small-caps;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt", "c2sc", "smcp";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "c2sc", "smcp";
+  font-feature-settings: "kern", "liga", "clig", "calt", "c2sc", "smcp";
+}
+.numbers {
+  letter-spacing: 0.01em;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum";
+  font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum";
+}
 
-#testimonials p {
+#testimonials p,
+.footer-bylaws {
   text-indent: -0.45em;
 }
 
@@ -75,9 +95,12 @@ main {
   }
   #about { order: 1; }
   #why { order: 3; }
-  #testimonials { order: 2; }
-  #application { order: 4; }
-} 
+  #testimonials { order: 4; }
+  #application { order: 2; }
+    #application h2:first-child {
+      margin-top: 0;
+    }
+}
 
 
 
@@ -171,6 +194,7 @@ header:after {
 .header-stremy {
   display: block;
   margin-top: 0.2em;
+  margin-left: 0.1em;
   margin-bottom: 0.3em;
   font-size: 16vw;
   line-height: 1;
