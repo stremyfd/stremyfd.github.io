@@ -68,10 +68,11 @@ abbr {
   font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum";
 }
 
-#testimonials p,
+#testimonials blockquote p,
 .footer-bylaws {
   text-indent: -0.4em;
 }
+.note { font-style: italic; }
 
 
 /* Composition
